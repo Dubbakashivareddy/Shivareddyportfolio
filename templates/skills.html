@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="projects">
+    <!-- Background Video -->
+    <video autoplay muted loop class="background-video">
+        <source src="{{ url_for('static', filename='videos/Projects.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <h2 class="skills-title">My Skills</h2>
+
+    <div class="skills-container">
+        <!-- Skill 1 -->
+        <div class="skill-item">
+            <img src="{{ url_for('static', filename='images/python.png') }}" alt="Skill 1">
+            <h3>Python</h3>
+        </div>
+        
+        <!-- Skill 2 -->
+        <div class="skill-item">
+            <img src="{{ url_for('static', filename='images/java.png') }}" alt="Skill 2">
+            <h3>Java</h3>
+        </div>
+        
+        <!-- Skill 3 -->
+        <div class="skill-item">
+            <img src="{{ url_for('static', filename='images/sql.png') }}" alt="Skill 3">
+            <h3>SQL</h3>
+        </div>
+
+        <div class="skill-item">
+            <img src="{{ url_for('static', filename='images/php.png') }}" alt="Skill 3">
+            <h3>PHP</h3>
+        </div>
+
+        <div class="skill-item">
+            <img src="{{ url_for('static', filename='images/clang.webp') }}" alt="Skill 3">
+            <h3>C Programming</h3>
+        </div>
+
+        <div class="skill-item">
+            <img src="{{ url_for('static', filename='images/html.png') }}" alt="Skill 3">
+            <h3>HTML & CSS</h3>
+        </div>
+
+        <div class="skill-item">
+            <img src="{{ url_for('static', filename='images/javascript.png') }}" alt="Skill 3">
+            <h3>Java Script</h3>
+        </div>
+
+        <div class="skill-item">
+            <img src="{{ url_for('static', filename='images/aws.jpg') }}" alt="Skill 3">
+            <h3>AWS</h3>
+        </div>
+
+        <div class="skill-item">
+            <img src="{{ url_for('static', filename='images/git.png') }}" alt="Skill 3">
+            <h3>GIT</h3>
+        </div>
+
+        <div class="skill-item">
+            <img src="{{ url_for('static', filename='images/machine.jpg') }}" alt="Skill 3">
+            <h3>Machine Learning</h3>
+        </div>
+
+        <div class="skill-item">
+            <img src="{{ url_for('static', filename='images/node.png') }}" alt="Skill 3">
+            <h3>Node JS</h3>
+        </div>
+
+        <div class="skill-item">
+            <img src="{{ url_for('static', filename='images/angular.png') }}" alt="Skill 3">
+            <h3>Angula JS</h3>
+        </div>
+    </div>
+</section>
+{% endblock %}

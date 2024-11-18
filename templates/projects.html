@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="projects">
+    <!-- Background Video -->
+    <video autoplay muted loop class="background-video">
+        <source src="{{ url_for('static', filename='videos/Projects.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <h2>Projects</h2>
+    <div class="projects-container">
+        <!-- Project 1 -->
+        <div class="project-box">
+            <img src="{{ url_for('static', filename='images/deepfake.jpg') }}" alt="Deep Fake Detection">
+            <h3> Deep Fake Detection</h3>
+            <button class="info-button" onclick="openModal('modal1')">More Details</button>
+        </div>
+
+        <!-- Modal for Project 1 -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeModal('modal1')">&times;</span>
+                <h3> Deep Fake Detection</h3>
+                <p>It is a CNN and python project</p>
+                <p><strong>Date:</strong> January 2024 - May 2024</p>
+                <p><strong>Location:</strong>Kansas City, MO</p>
+                <p><strong>University:</strong> University of Missouri-Kansas City</p>
+                <p>Deep Fake Detection is the process of identifying bogus photographs that were created using
+                    deep learning methods is known as "deep fake detection." Machine learning algorithms are
+                    used to replace or alter certain elements of an original video or image, like a person's face, to
+                    create deepfakes. Deepfake detection aims to recognise these kinds of alterations and separate
+                    them from authentic photos or videos.</p>
+                <a href="https://github.com/Dubbakashivareddy/Deep-Fake-using-CNN" target="_blank" class="info-button">View on GitHub</a>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-box">
+            <img src="{{ url_for('static', filename='images/nine.webp') }}" alt="Nine Men's Morris">
+            <h3>Nine Men's Morris</h3>
+            <button class="info-button" onclick="openModal('modal2')">More Details</button>
+        </div>
+
+        <!-- Modal for Project 2 -->
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeModal('modal2')">&times;</span>
+                <h3>Nine Men's Morris</h3>
+                <p>A strategic board game implemented using Java.</p>
+                <p><strong>Date:</strong> Aug 2023 ‑ Dec 2023</p>
+                <p><strong>Location:</strong> Kansas City, MO</p>
+                <p><strong>University:</strong>University of Missouri-Kansas City</p>
+                <p>We have designed a game named Nine Men Morris using Python. We have added 3 different modes like AIvs.Human, Humanvs.Human and
+                    AIvs.AI
+                   We have used python as backend, visual studio code as our editor. We have done this project under adv software engineering course, where
+                    we mainly focused on sprints, User stories, Acceptance criteria</p>
+                <a href="https://github.com/Dubbakashivareddy/Nine-Men-Morris" target="_blank" class="info-button">View on GitHub</a>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-box">
+            <img src="{{ url_for('static', filename='images/book.jpg') }}" alt="Online-bookstore-system">
+            <h3>Online-bookstore-system</h3>
+            <button class="info-button" onclick="openModal('modal3')">More Details</button>
+        </div>
+
+        <!-- Modal for Project 3 -->
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeModal('modal3')">&times;</span>
+                <h3>Online-bookstore-system</h3>
+                <p>It is a python project using django and AWS.</p>
+                <p><strong>Date:</strong> Aug 2023 - Dec 2023</p>
+                <p><strong>Location:</strong>Kansas City, MO</p>
+                <p><strong>University:</strong>University of Missouri-Kansas City</p>
+                <p>We have developed a web application using python and django, where the users can purchace different types of books in different fields. 
+                   And we have deployed our application in AWS using Elastic beanstalk, S3 bucket, and connected the data base using AWS relational databases.</p>
+                <a href="https://github.com/Dubbakashivareddy/Online-bookstore-system" target="_blank" class="info-button">View on GitHub</a>
+            </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-box">
+            <img src="{{ url_for('static', filename='images/hospital.png') }}" alt="e‑Health Care Management Systems">
+            <h3>e‑Health Care Management Systems</h3>
+            <button class="info-button" onclick="openModal('modal4')">More Details</button>
+        </div>
+
+        <!-- Modal for Project 4 -->
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeModal('modal4')">&times;</span>
+                <h3>e‑Health Care Management Systems</h3>
+                <p>It is a health care management application using java</p>
+                <p><strong>Date:</strong> Jan 2021 ‑ May 2021</p>
+                <p><strong>Location:</strong> Vijayawada, India</p>
+                <p><strong>University:</strong> KL Unioversity</p>
+                <p>We have worked on e‑health care systems using java.We have created the web application for the health care, where the users can know about
+                    the different types of treatments and they can also know about the specialized doctors.
+                   Users can also make the appointments for there issue or treatment with any doctor. And the admin can confirm the appointment and intimate
+                    the particular doctor about the patient. We have used the database as MySQL
+                    </p>
+                <a href="https://github.com/Dubbakashivareddy/E-Health-care-systems" target="_blank" class="info-button">View on GitHub</a>
+            </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-box">
+            <img src="{{ url_for('static', filename='images/publicity.png') }}" alt="Publicity and Marketing Management Systems">
+            <h3>Publicity and Marketing Management Systems</h3>
+            <button class="info-button" onclick="openModal('modal5')">More Details</button>
+        </div>
+
+        <!-- Modal for Project 5 -->
+        <div id="modal5" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeModal('modal5')">&times;</span>
+                <h3>Publicity and Marketing Management Systems</h3>
+                <p>It is a advertising web application using python and django framework.</p>
+                <p><strong>Date:</strong>July 2020 ‑ Dec 2020</p>
+                <p><strong>Location:</strong>Vijayawda, India</p>
+                <p><strong>University:</strong>KL University</p>
+                <p>It is Python Full Stack project. We have created a web application for Advertising and Marketing on gaming products, where the user can know
+                    about the product and can see the articles on the products and they can also buy the product, the application will redirect to the amazon and
+                    they can buy there product.
+                   We have used Django framework for creating the application. And the admin can add the articles, products, and the news on latest new products.
+                    And we have used SQL foe database</p>
+                <a href="https://github.com/Dubbakashivareddy/Publicity-and-marketing-systems" target="_blank" class="info-button">View on GitHub</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

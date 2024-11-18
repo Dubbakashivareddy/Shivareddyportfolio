@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="projects">
+    <!-- Background Video -->
+    <video autoplay muted loop class="background-video">
+        <source src="{{ url_for('static', filename='videos/Projects.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Profile Image -->
+    <div class="profile-image-container">
+        <img src="{{ url_for('static', filename='images/shiva.jpg') }}" alt="Shiva Reddy" class="profile-image">
+    </div>
+
+    <div class="content">
+        <h1>Welcome to Shiva Reddy's Portfolio</h1>
+        <p>I am Shiva Reddy Dubbaka, a master's student specializing in Computer Science at the University of Missouri-Kansas City (UMKC). With a strong foundation in software development and a passion for problem-solving, I am committed to leveraging technology to create innovative solutions. During my academic journey, I have gained extensive knowledge in various programming languages, frameworks, and technologies, which I have applied in diverse projects. My experiences include developing web applications, working on data structures and algorithms, and understanding network security protocols.</p>
+
+        <div class="button-container">
+            <a href="{{ url_for('static', filename='certificates/Shiva Reddy Resume.pdf') }}" target="_blank">Resume</a>
+            <a href="https://github.com/Dubbakashivareddy" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/dubbakashivareddy3004/" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>Email: <a href="mailto:shivareddydubbaka85@gmail.com">shivareddydubbaka85@gmail.com</a></p>
+    <p>Phone: <a href="tel:+19134840887">+1 (913) 484-0887</a></p>
+</footer>
+{% endblock %}

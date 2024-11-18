@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="projects">
+    <!-- Background Video -->
+    <video autoplay muted loop class="background-video">
+        <source src="{{ url_for('static', filename='videos/Projects.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+<section class="experience">
+    <h2>Experience/Internships</h2>
+    <div class="experience-container">
+        <!-- Experience 1 -->
+        <div class="experience-box">
+            <h3>Internship at Lineysha and Thevan Software Technologies</h3>
+            <p><strong>Duration:</strong> Nov 2022 ‑ Mar 2023</p>
+            <p><strong>Location:</strong>Vijayawada, India</p>
+            <button class="info-button" onclick="openModal('modal1')">More-Info</button>
+        </div>
+
+        <!-- Modal for Experience 1 Certificate -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeModal('modal1')">&times;</span>
+                <h3>Internship at Lineysha and Thevan Software Technologies</h3>
+                <p><strong>Responsibilities:</strong>I have worked with Python Project based on Machine Learning and Deep Learning
+                    We have worked on Automatic e‑Government Services, where the software is used to Generating hand written digits recognition using deep
+                    learning model. And if the user was commented for the government policies the software can detect is it positive comment or negative comment
+                    for the policy.
+                    </p>
+                <a href="{{ url_for('static', filename='certificates/Lineshya.pdf') }}" class="info-button" target="_blank">View Certificate</a>
+                <p>This certificate recognizes accomplishments and contributions for the Intern role at Lineysha and Thevan Software Technologies.</p>
+            </div>
+        </div>
+
+        <!-- Experience 3 -->
+        <div class="experience-box">
+            <h3>Internship at Eduskills</h3>
+            <p><strong>Duration:</strong> Oct 2021 - Dec 2021</p>
+            <p><strong>Location:</strong> Virtual</p>
+            <button class="info-button" onclick="openModal('modal3')">More-Info</button>
+        </div>
+
+        <!-- Modal for Experience 3 Certificate -->
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeModal('modal3')">&times;</span>
+                <h3>Internship at Eduskills</h3>
+                <p><strong>Responsibilities:</strong>I have done this intrnship on Robotic Process and Automation using Blue Prism tool. Where i have worked on the tool for creating the bots.
+                I have created a bot nfor amazon primee video, the bot can help for users to search the movies in different catagories and easy to find to watch the movie.</p>
+                <a href="{{ url_for('static', filename='certificates/Robotic.pdf') }}" class="info-button" target="_blank">View Certificate</a>
+                <p>This certificate recognizes accomplishments and contributions for the Intern role at Eduskills/p>
+            </div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="experience-box">
+            <h3>Internship at Microsoft Student Ambassador</h3>
+            <p><strong>Duration:</strong> June 2021 - July 2021</p>
+            <p><strong>Location:</strong> Virtual</p>
+            <button class="info-button" onclick="openModal('modal2')">More-Info</button>
+        </div>
+
+        <!-- Modal for Experience 2 Certificate -->
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeModal('modal2')">&times;</span>
+                <h3>Internship at Microsoft Student Ambassador</h3>
+                <p><strong>Responsibilities:</strong> I have worked with PHP, where i have completed a project named Student Management systems using PHP. And it is Full Stack Web development
+                    project. We have used PHP as backend and html, css, java script as frontend.
+                    Student Management systems project explains about where student can write the exams which the university will conduct and uploads the
+                    course materials for students and student can submit their assignments.
+                    </p>
+                <a href="{{ url_for('static', filename='certificates/Microsoft.pdf') }}" class="info-button" target="_blank">View Certificate</a>
+                <p>This certificate recognizes accomplishments and contributions for the Intern role at Microsoft Student Ambassador.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function openModal(modalId) {
+        document.getElementById(modalId).style.display = 'block';
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = 'none';
+    }
+
+    // Close the modal when clicking outside the modal content
+    window.onclick = function(event) {
+        const modals = document.getElementsByClassName('modal');
+        for (let modal of modals) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    }
+</script>
+{% endblock %}
